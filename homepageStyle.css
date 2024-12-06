@@ -9,11 +9,16 @@
     justify-content: space-between;
     align-items: center;
     color: white;
-    height: 70px;
-    position: fixed;
+    height: 80px;
+    position: sticky;
     width: 100%;
+    max-width: 1300px;
     top: 0;
     z-index: 1000;
+    border-radius: 20px;
+    margin: 16px auto;
+    text-shadow: black;
+    padding: 16px 32px;
 }
 .navbar .logo h1{
     margin: 15px;
@@ -30,6 +35,7 @@
 }
 .navbar nav ul li a{
     text-decoration: none;
+    border-radius: 10px;
     color: white;
     font-weight: 500;
     padding: 8px 16px;
@@ -44,6 +50,41 @@
 .body{
     margin-top: 70px;
     display: flex;
-    justify-content: center;
+    text-align: center;
     align-items: center;
+    flex-direction: column;
+}
+.body div{
+    margin: 70px;
+}
+.body p{
+    font-size: 18px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.body-text h1{
+    text-align: center;
+    font-size: 50px;
+}
+.video{
+
+    max-width: 900px;
+    max-height: 720px;
+}
+.video video{
+    width: 400px; 
+    height: 300px;
+    object-fit: contain;
+}
+.btn1{
+    border: none;
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+.btn1:hover {
+    background-color: #8a2be2;
 }
