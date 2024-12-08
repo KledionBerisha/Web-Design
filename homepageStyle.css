@@ -88,3 +88,45 @@
 .btn1:hover {
     background-color: #8a2be2;
 }
+.comments-container{
+max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.comments{
+    text-align: center;
+    padding: 20px;
+}
+.stars{
+    font-size: 24px;
+    color: gold;
+    margin-bottom: 10px;
+}
+.comments p{
+    font-size: 16px;
+    line-height: 1.6
+}
+.comments p strong{
+    color: #8a2be2;
+}
+.profiles{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+.profile{
+    text-align: center;
+}
+.profile h4{
+    margin: 10px 0 5px;
+    font-size: 19px; 
+}
+.profile p{
+    font-size: 0.9;
+    color: #666;
+}
