@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+* strong{
+    color: #8a2be2;;
 }
 .navbar{
     background-color: #6a0dad;
@@ -88,6 +92,9 @@
 .btn1:hover {
     background-color: #8a2be2;
 }
+.body-text h2{
+    margin: 70px;
+}
 .comments-container{
 max-width: 1200px;
   margin: 0 auto;
@@ -114,9 +121,9 @@ max-width: 1200px;
     font-size: 16px;
     line-height: 1.6
 }
-.comments p strong{
+/* .comments p strong{
     color: #8a2be2;
-}
+} */
 .profiles{
     display: flex;
     justify-content: space-around;
