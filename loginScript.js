@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded",() =>{
             return false;
         }
         alert("Form submitted successfully");
-        return true;
+        window.location.href = "homepage.html";
+        return false;
     };
         const emailValid = (email) =>{
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
