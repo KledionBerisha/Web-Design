@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: verdana;
+    line-height: 1.5;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color: #525252;
+    padding: 60px 10%;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer{
+    width: 25%;
+}
+
+.footer h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(158, 154, 154);
+    text-transform: capitalize;
+}
+
+.footer h4::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: rgb(219, 216, 222);
+    height: 2px;
+    width: 60px;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+ul li a{
+    display: block;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    transition: 0.2;
+}
+ul li a:hover{
+    color: white;
+    padding-left: 5px;
+}
+
+.link a{
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    color: white;
+    background-color: rgb(79, 23, 185);
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.link a:hover{
+    color: #4d4f55;
+    background-color: white;
+}
+
+@media screen and (max-width: 778px){
+    .footer{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer h4::before{
+        all: unset;
+    }   
+}
+
+
