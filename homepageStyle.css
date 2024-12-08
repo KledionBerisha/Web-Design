@@ -95,6 +95,81 @@
 .body-text h2{
     margin: 70px;
 }
+.task-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+.dashboard{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+.dashboard h2{
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.task-board h3{
+    font-size: 19px;
+    margin-top: 15px;
+}
+.task-board ul{
+    list-style-type: disc;
+    margin-left: 20px;
+    padding: 0;
+}
+.task-board li{
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.calendar-section {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+  }
+  
+.calendar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.progress-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 30px;
+    background-color: #e0e0e0;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50; 
+    transition: width 0.3s ease; 
+    position: relative;
+  }
+  
+  .progress-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    color: black; 
+    transition: color 0.3s ease; 
+  }
+  
+  .progress-bar .progress-text {
+    color: white;
+  }
+  
 .comments-container{
 max-width: 1200px;
   margin: 0 auto;
@@ -146,4 +221,37 @@ max-width: 1200px;
     border: #4a0072 solid;
     border-radius: 15px;
     padding: 15px;
+}
+.saving-section{
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    overflow: hidden;
+}
+.saving-container{
+    max-width: 600px;
+    margin: 0 auto;
+}
+h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+p{
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+.btn2{
+    border: none;
+    padding: 10px 20px;
+    background-color: purple;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 25px;
+}
+.btn2:hover {
+    background-color: #8a2be2;
 }

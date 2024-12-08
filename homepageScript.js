@@ -46,3 +46,46 @@ function generateProfiles(){
 }
 generateProfiles();
 showTestimonial(0);
+
+document.addEventListener("DOMContentLoaded", function () {
+    const calendarEl = document.getElementById("calendar");
+
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: "dayGridMonth",
+      headerToolbar: {
+        left: "prev,next today",
+        center: "title",
+        right: "dayGridMonth,timeGridWeek,timeGridDay",
+      },
+      events: [
+        {
+          title: "Meeting with Sarah",
+          start: "2024-12-12T10:30:00",
+        },
+        {
+          title: "Project Deadline",
+          start: "2024-12-15",
+        },
+        {
+          title: "Lunch Break",
+          start: "2024-12-20T13:00:00",
+        },
+      ],
+    });
+
+    calendar.render();
+  });
+
+  function updateProgress(progress) {
+    const progressBar = document.querySelector(".progress-bar");
+    const progressText = document.querySelector(".progress-text");
+
+    progressBar.style.width = `${progress}%`;
+    progressText.textContent = `${progress}%`;
+
+    if (progress >= 50) {
+      progressText.style.color = "white";
+    } else {
+      progressText.style.color = "black";
+    }
+  }
