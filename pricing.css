@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif
+}
+
+section{
+    background-color: purple;
+}
+
+.price{
+    width: 100%;
+    max-width: 980px;
+    padding: 5rem 0.875rem;
+    margin: 0 auto;
+}
+
+.pricing-t {
+    color: #fff;
+    text-align: center;
+}
+
+.pricing-t h1 {
+    font-size: 2rem;
+    margin: 0 8rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.3rem;
+}
+
+.pricing-t p {
+    margin: 0 8rem;
+    opacity: 0.7;
+}
+
+.price-items {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+
+.price-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.price-item h3 {
+    color: purple;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.priceitem{
+    padding: 2rem 0;
+    font-weight: bold;
+}
+
+.priceitem .dollar{
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.item-info{
+    list-style: none;
+    color: gray;
+    padding-bottom: 2rem;
+}
+
+.item-info li{
+    margin-bottom: 0.3rem;
+}
+
+.price-item button {
+    background-color: purple;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 2rem;
+    color: #fff;
+}
+
+.price-item button:hover {
+    background-color: rgb(255, 5, 255);
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .price-items {
+        flex-direction: column;
+    }
+
+    .pricing-t h1{
+        margin: 0;
+    }
+
+    .pricing-t p{
+        margin: 0;
+        margin-top: 1rem;
+    }
+}
