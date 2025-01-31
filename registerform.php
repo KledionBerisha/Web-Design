@@ -7,7 +7,8 @@
     $user = new User($conn);
 
     $message=null;
-    if($_SERVER["REQUEST_METHOD"]==="POST"){
+    $success=false;
+    if($_SERVER["REQUEST_METHOD"]==="POST" && isset($_POST["submit"])){
 
         $username=filter_input(INPUT_POST,"username",FILTER_SANITIZE_SPECIAL_CHARS);
         $email=filter_input(INPUT_POST,"email",FILTER_SANITIZE_EMAIL);
@@ -16,7 +17,13 @@
         if (empty($username) || empty($email) || empty($password)){
             $message= "Username, email and password are required!";
         } else {
-        $message = $user->register($username, $email, $password);
+            $registerationResult=$user->register($username, $email, $password);
+            if($registerationResult==="User registered successfully"){
+                $success=true;
+                $message="Registration successful! You will  be redirected to the login page.";
+            }else{
+                $message = $registerationResult;
+            }
         }
     }
 ?>
@@ -28,15 +35,18 @@
     <title>Register Form</title>
     <link rel="stylesheet" href="registerform.css">
     <script>
-        function showAlert(message){
+        function showAlert(message, isSuccess=false){
             if(message){
                 alert(message);
+                if(isSuccess){
+                    window.location.href="login.php";
+                }
             }
         }
     </script>
-    <script src="RegisterScript.js"></script>
+    
 </head>
-<body onload="<?php if (isset($_POST['submit']) && !empty($message)) echo "showAlert('" . addslashes($message) . "')"; ?>">    
+<body onload="<?php if (isset($_POST['submit']) && !empty($message)) echo "showAlert('" . addslashes($message) . "'," . ($success ? 'true':'false') . ")"; ?>">    
     <div class="container">
         <header>Register</header>
         <form action="registerform.php" method="POST" id="registerForm" class="form">
@@ -85,7 +95,7 @@
             <a href="#" class="goBack">Go back to login</a>
         </form>
     </div>
-    
+    <script src="RegisterScript.js"></script>
 </body>
 </html>
 <?php
