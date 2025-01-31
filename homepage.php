@@ -1,3 +1,23 @@
+<?php
+    session_start();
+    include("database.php");
+
+    if(!isset($_SESSION['ID']) && isset($_COOKIE['remember'])){
+        $db=new dbConnect();
+        $conn=$db->connectDB();
+
+        $sql="SELECT * FROM users WHERE remember_token = :token";
+        $stmt=$conn->prepare($sql);
+        $stmt->bindParam(":token",$_COOKIE['remember']);
+        $stmt->execute();
+        $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($userRow){
+            $_SESSION['ID']=$userRow['ID'];
+            $_SESSION['username']=$userRow['username'];
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +40,29 @@
             <ul>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="login.html" class="btn">Login</a></li>
+                <!-- <li><a href="login.php" class="btn">Login</a></li> -->
+                    <?php if(isset($_SESSION['ID'])): ?>
+                        <?php if($_SESSION['username']==='admin'||$_SESSION['ID']==1): ?>
+                            <li class="user-dropdown">
+                                <a href="#" id="user-btn"><?php echo $_SESSION['username']; ?> ▼</a>
+                                <ul class="dropdown-menu" id="dropdown-menu">
+                                    <li><a href="tasks.php">My Tasks</a></li>
+                                    <li><a href="dashboardAdmin.php">Manage</a></li>
+                                    <li><a href="logout.php">Log Out</a></li>
+                                </ul>
+                            </li>
+                        <?php else:?>
+                            <li class="user-dropdown">
+                                <a href="#" id="user-btn"><?php echo $_SESSION['username']; ?> ▼</a>
+                                <ul class="dropdown-menu" id="dropdown-menu">
+                                    <li><a href="tasks.php">My Tasks</a></li>
+                                    <li><a href="logout.php">Log Out</a></li>
+                                </ul>
+                            </li>
+                        <?php endif; ?>
+                <?php else: ?>
+                    <li><a href="login.php" class="btn">Login</a></li>
+                <?php endif; ?>
             </ul>
         </nav>
     </header>
