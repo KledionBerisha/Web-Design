@@ -80,7 +80,7 @@ body{
     color: #5a0251;
 }
 
-.aboutC  .read-more{
+.aboutC  .homepage{
     display: inline-block;
     padding: 10px 20px;
     background-color: purple;
@@ -91,7 +91,7 @@ body{
     margin-top: 30px;
 }
 
-.aboutC  .read-more:hover{
+.aboutC  .homepage:hover{
     background-color: purple;
 }
 
@@ -121,7 +121,7 @@ body{
     .aboutC p{
         padding: 0px; 
     }
-    .aboutC .read-more{
+    .aboutC .homepage{
         font-size: 15px;
     }
 

@@ -146,8 +146,11 @@
             <h1>Save up to 2 hours / day</h1>
             <p>Sign up for <strong>DailySync</strong> today</p>
             <a href="login.html"><button class="btn2">Get Started</button></a>
+            <a href="javascript:void(0)"><button class="btn3" onclick="openPopup()">Contact Us</button></a>
+            <div id="popup-container"></div>
         </div>
     </div>
+    
     <footer>
         <div class="footer">
             <h4>Product</h4>
@@ -173,11 +176,10 @@
             <ul>
                 <li><a href="aboutus.html">About us</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="javascript:void(0)" onclick="openPopup()">Contact us</a></li>
                 <li><a href="#">Terms of Service</a></li>
             </ul>
         </div>
-
         <div class="footer">
             <h4>Community</h4>
             <div class="link">
@@ -190,6 +192,6 @@
             </div>
         </div>
     </footer>
-    <script src="homepageScript.js"></script>
+<script src="homepageScript.js"></script>
 </body>
 </html>
