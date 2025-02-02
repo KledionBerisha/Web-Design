@@ -1,5 +1,4 @@
 <?php
-
 class dbConnect {
     private $conn = null;
     private $host = 'localhost';
@@ -15,9 +14,8 @@ class dbConnect {
             //echo "Lidhja u krijua me sukses";
             return $this->conn;
         } catch (PDOException $pdoe) {
-            die("Nuk mund te lidhje me bazen e te dhenave {$this->dbname}: " . $pdoe->getMessage());
+            die("It could not connect to the database {$this->dbname}: " . $pdoe->getMessage());
         }
     }
 }
-    
 ?>

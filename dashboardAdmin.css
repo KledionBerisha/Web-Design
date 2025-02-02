@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.navbar {
+    background-color: #6a0dad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 80px;
+    padding: 16px 32px;
+    border-radius: 20px;
+    margin: 16px auto;
+    max-width: 1300px;
+}
+
+.navbar .logo h1 {
+    font-size: 29px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.navbar ul li a:hover {
+    background-color: #52009b;
+}
+
+.dashboard-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: #6a0dad;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #52009b;
+}
+
+.main-content {
+    flex-grow: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content h2 {
+    margin-bottom: 20px;
+    color: #6a0dad;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th,
+.user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #6a0dad;
+    color: white;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.user-table tr:hover {
+    background-color: #ddd;
+}
+
+.btn-delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    background-color: darkred;
+}
+.message-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.message-table th {
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.message-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.message-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.message-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.message-table tr:hover {
+    background-color: #eee;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .message-table th, .message-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
