@@ -1,4 +1,5 @@
 <?php
+
 class dbConnect {
     private $conn = null;
     private $host = 'localhost';
@@ -18,4 +19,5 @@ class dbConnect {
         }
     }
 }
+    
 ?>
