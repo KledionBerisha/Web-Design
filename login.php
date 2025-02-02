@@ -96,7 +96,7 @@
                 <label><input type="checkbox" name="remember" id="">Remember me</label>
                 <a href="#">Forgot password?</a>
             </div>
-            <a href="homepage.html"><button type="submit" class="btn" id="submit">Login</button></a>
+            <a href="homepage.php"><button type="submit" class="btn" id="submit">Login</button></a>
             <div class="register-link">
                 <p>Don't have an account?
                     <a href="registerform.php">Register</a>

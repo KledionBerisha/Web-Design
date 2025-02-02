@@ -92,7 +92,7 @@
             </div>
             
             <button type="submit" name="submit" id="submit">Submit</button>
-            <a href="#" class="goBack">Go back to login</a>
+            <a href="login.php" class="goBack">Go back to login</a>
         </form>
     </div>
     <script src="RegisterScript.js"></script>

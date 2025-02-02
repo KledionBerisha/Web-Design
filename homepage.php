@@ -38,8 +38,8 @@
         </div>
         <nav>
             <ul>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="pricing.php">Pricing</a></li>
+                <li><a href="AboutUs.php">About Us</a></li>
                 <!-- <li><a href="login.php" class="btn">Login</a></li> -->
                     <?php if(isset($_SESSION['ID'])): ?>
                         <?php if($_SESSION['username']==='admin'||$_SESSION['ID']==1): ?>
@@ -70,7 +70,7 @@
         <div class="body-text">
             <h1>Organize Your Day Effortlessly</h1>
             <p>Plan, prioritize and execute tasks seamlessly with out all-in-one task management tool.</p>
-            <a href="login.html"><button class="btn1">Get Started</button></a>
+            <a href="login.php"><button class="btn1">Get Started</button></a>
             <h2>Never miss a thing.</h2>
             <p>Everything gets imported in our <strong>Universal Inbox</strong> from 3000+ apps.</p>
         </div>
@@ -145,7 +145,7 @@
         <div class="saving-container">
             <h1>Save up to 2 hours / day</h1>
             <p>Sign up for <strong>DailySync</strong> today</p>
-            <a href="login.html"><button class="btn2">Get Started</button></a>
+            <a href="login.php"><button class="btn2">Get Started</button></a>
             <a href="javascript:void(0)"><button class="btn3" onclick="openPopup()">Contact Us</button></a>
             <div id="popup-container"></div>
         </div>
@@ -157,7 +157,7 @@
             <ul>
                 <li><a href="#">Method</a></li>
                 <li><a href="#">How to use guide</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="pricing.php">Pricing</a></li>
                 <li><a href="#">Reviews</a></li>
             </ul>
         </div>
@@ -174,7 +174,7 @@
         <div class="footer">
             <h4>Company</h4>
             <ul>
-                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="aboutus.php">About us</a></li>
                 <li><a href="#">Privacy Policy</a></li>
                 <li><a href="javascript:void(0)" onclick="openPopup()">Contact us</a></li>
                 <li><a href="#">Terms of Service</a></li>
